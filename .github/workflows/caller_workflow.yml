@@ -19,7 +19,6 @@ jobs:
       target_env: ${{ github.events.inputs.target_env }}
   build:
     needs: call_json
-    name: Step1
     uses: jkumarsahoo/called_repo/.github/workflows/reusable_workflow.yml@main
     with:
       parameter1:   ${{ fromJson(needs.call_json.outputs.json).param1 }}
