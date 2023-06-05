@@ -1,0 +1,36 @@
+name: caller_worklfow_
+on:
+  workflow_dispatch:
+    inputs:
+      target_env:
+        description: Target environment name
+        type: choice
+        required: true
+        options:
+        - TEST
+        - UAT
+        - PROD
+        
+  
+jobs:
+  call_json:
+    uses: jkumarsahoo/caller_repo/.github/workflows/load_environment_specific_input_parameters.yml@main
+    with:
+      target_env: ${{ github.events.inputs.target_env }}
+  build:
+    needs: call_json
+    name: Step1
+    uses: jkumarsahoo/called_repo/.github/workflows/reusable_workflow.yml@main
+    with:
+      parameter1:   ${{ fromJson(needs.call_json.outputs.json).param1 }}
+      parameter2:  ${{ fromJson(needs.call_json.outputs.json).param2 }}
+      parameter3:  ${{ fromJson(needs.call_json.outputs.json).param3 }}
+      parameter4:  ${{ fromJson(needs.call_json.outputs.json).param4 }}
+      parameter5:  ${{ fromJson(needs.call_json.outputs.json).param5 }}
+      parameter6:  ${{ fromJson(needs.call_json.outputs.json).param6 }}
+      parameter7:  ${{ fromJson(needs.call_json.outputs.json).param7 }}
+      parameter8:  ${{ fromJson(needs.call_json.outputs.json).param8 }}
+      parameter9:  ${{ fromJson(needs.call_json.outputs.json).param9 }}
+      parameter10:  ${{ fromJson(needs.call_json.outputs.json).param10 }}
+      parameter11:  ${{ fromJson(needs.call_json.outputs.json).param11 }}
+      parameter12:  ${{ fromJson(needs.call_json.outputs.json).param12 }}
