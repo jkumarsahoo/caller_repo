@@ -1,0 +1,44 @@
+{
+"TEST":{
+  "param1": "test1",
+  "param2": "test2",
+  "param3": "test3",
+  "param4": "test4",
+  "param5": "test5",
+  "param6": "test6",
+  "param7": "test7",
+  "param8": "test8",
+  "param9": "test9",
+  "param10": "test10",
+  "param11": "test11",
+  "param12": "test12"
+},
+"UAT":{
+  "param1": "uat1",
+  "param2": "uat2",
+  "param3": "uat3",
+  "param4": "uat4",
+  "param5": "uat5",
+  "param6": "uat6",
+  "param7": "uat7",
+  "param8": "uat8",
+  "param9": "uat9",
+  "param10": "uat10",
+  "param11": "uat11",
+  "param12": "uat12"
+},
+"PROD":{
+  "param1": "prod1",
+  "param2": "prod2",
+  "param3": "prod3",
+  "param4": "prod4",
+  "param5": "prod5",
+  "param6": "prod6",
+  "param7": "prod7",
+  "param8": "prod8",
+  "param9": "prod9",
+  "param10": "prod10",
+  "param11": "prod11",
+  "param12": "prod12"
+}
+}
